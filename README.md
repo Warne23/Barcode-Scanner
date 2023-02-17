@@ -1,7 +1,7 @@
 # Barcode-Scanner
 
-The project aims at detecting the barcodes in a given image.This scanner doesn't use any pre trained model as such. All the tasks are done using OpenCV and the pyzbar library.
-The dataset included 13 images.There were 6 tasks to be accomplished.Tasks 1,2,3 have been done in the same file.All the other tasks have a seperate file.The bulk code involves Image Preprocessing and is the same in all the tasks. The only difference was
+The project aims at detecting barcodes in a given image. This scanner doesn't use any pre trained model as such. All the tasks are done using OpenCV and the pyzbar library.
+The dataset included 13 images. There were 6 tasks to be accomplished. Tasks 1,2,3 have been done in the same file. All the other tasks have a seperate file. The majority of the code involves Image Preprocessing and is the same for all the tasks. The only difference was
 the Region of Interest (ROI) for each task.
 
 ## Description
@@ -17,10 +17,11 @@ After seperating each object we used the Pyzbar library to detect the barcodes c
 ## Key Inference
 
 - The model works well if the objects in the image are at a certain distance and there is a monochromatic background with no shadows.
-- For some reason the library also detects QR codes.
-- If the barcode is partially visible but not readable the library fails to recognize it as a barcode and thus,we couldn't differentiate between images with no barcodes and partially visible barcodes.
+- By setting the dimensions of the Morph Rectangle very small, the detection accuracy increased.
+- The library also detects QR codes.
+- If the barcode is partially visible but not readable the library fails to recognize it as a barcode and thus, we couldn't differentiate between images with no barcodes and partially visible barcodes.
 
-To seperate the partially visible barcodes, we tried to get a template of the barcode and find similar objects in the image but that didn't give results.
+To seperate the partially visible barcodes, we tried to get a template of the barcode and find similar objects in the image but that didn't give satisfactory results.
 We could use pre trained models like Tiny Yolo to improve our accuracy.
 
 The images are taken from :
