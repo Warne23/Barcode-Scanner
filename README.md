@@ -16,7 +16,7 @@ After seperating each object we used the Pyzbar library to detect the barcodes c
 
 ## Key Inference
 
-- The model works well if there are less objects in the image and a monochromatic background with no shadows.
+- The model works well if the objects in the image are at a certain distance and there is a monochromatic background with no shadows.
 - For some reason the library also detects QR codes.
 - If the barcode is partially visible but not readable the library fails to recognize it as a barcode and thus,we couldn't differentiate between images with no barcodes and partially visible barcodes.
 
@@ -26,7 +26,7 @@ We could use pre trained models like Tiny Yolo to improve our accuracy.
 The images are taken from :
 https://drive.google.com/drive/folders/1ONhcr1Z5_UuRmnkKu4xx4KFzIeJBMhnW?usp=sharing
 
-Results of all tasks can be seen at:
+Results of all tasks can be seen at: https://drive.google.com/drive/folders/1-ebLiRuUv44ytmXfHzTn3Y2Q6od6x-T4?usp=share_link
 
 
 
